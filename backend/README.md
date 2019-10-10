@@ -13,7 +13,7 @@
 # Tests
 - Login API
 - Invalid inputs Login API
-- Encode APIShould success if input string exist
+- Encode API
 - Encode Middleware API
 
 Run with npm test
