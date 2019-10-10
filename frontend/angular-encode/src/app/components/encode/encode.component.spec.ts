@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { EncodeComponent } from './encode.component';
 
 describe('EncodeComponent', () => {
@@ -8,6 +8,7 @@ describe('EncodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [ EncodeComponent ]
     })
     .compileComponents();

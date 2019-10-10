@@ -12,6 +12,7 @@
           <label for="string">Encode_string</label>
           <input
             [(ngModel)]="user.string"
+            pattern="[a-zA-Z ]*"
             name="string"
             required
             class="form-control"
@@ -20,11 +21,12 @@
         </div>
         <div class="form-group">
 
-            <p>Output <em>{{ encode_string | json}}!</em></p>
+            <p>Output: <em>{{ encode_string}}</em></p>
             
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a [routerLink]="['/']" class="btn btn-success">Cancel</a>
     </form>
+            <button class="btn btn-primary" (click)="logOut()">Log out</button>
     </div>
   </div>

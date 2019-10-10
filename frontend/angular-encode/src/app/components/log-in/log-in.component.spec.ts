@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { LogInComponent } from './log-in.component';
 
@@ -8,7 +9,8 @@ describe('LogInComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LogInComponent ]
+      imports: [ FormsModule ],
+      declarations: [ LogInComponent ],
     })
     .compileComponents();
   }));

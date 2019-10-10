@@ -35,11 +35,9 @@ export class AuthEffects {
         .switchMap(payload => {
             return this.authService.logIn(payload.email, payload.password)
                 .map((user) => {
-                    console.log(user.token);
                     return new LogInSuccess({ token: user.token });
                 })
                 .catch((error) => {
-                    console.log("LOG", error.statusText);
                     return Observable.of(new LogInFailure({ error: error }));
                 });
         });
@@ -58,6 +56,7 @@ export class AuthEffects {
         ofType(AuthActionTypes.LOGOUT),
         tap((user) => {
             localStorage.removeItem('token');
+            this.router.navigateByUrl('/landing');
         })
     )
     @Effect()
@@ -67,7 +66,6 @@ export class AuthEffects {
         .switchMap(payload => {
             return this.authService.encode(payload.string)
                 .map((payload) => {
-                    console.log("string", payload.encode_string);
                     return new EncodeSuccess({ encode_string: payload.encode_string });
                 })
         });

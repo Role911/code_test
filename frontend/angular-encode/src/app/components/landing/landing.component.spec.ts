@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { LandingComponent } from './landing.component';
 
 describe('LandingComponent', () => {
@@ -8,6 +8,7 @@ describe('LandingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [ LandingComponent ]
     })
     .compileComponents();

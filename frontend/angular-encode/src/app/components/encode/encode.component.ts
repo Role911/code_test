@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import { User } from './../../models/user';
 import { AppState, selectAuthState } from './../../store/app.states';
 import { EncodeString } from './../../store/actions/auth.actions';
-
+import { LogOut } from '../../store/actions/auth.actions';
 
 @Component({
   selector: 'app-encode',
@@ -27,7 +27,6 @@ export class EncodeComponent implements OnInit {
 
   ngOnInit() {
     this.getState.subscribe((state) => {
-      console.log("state", state)
       this.errorMessage = state.errorMessage;
       this.encode_string= state.encode_string;
     });
@@ -38,6 +37,10 @@ export class EncodeComponent implements OnInit {
       string: this.user.string
     };
     this.store.dispatch(new EncodeString(payload));
+  }
+
+  logOut(): void {
+    this.store.dispatch(new LogOut);
   }
 
 }
