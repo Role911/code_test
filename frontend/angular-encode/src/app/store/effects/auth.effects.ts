@@ -15,7 +15,7 @@ import { AuthService } from '../../services/auth.service';
 
 import {
     AuthActionTypes,
-    LogIn, LogInSuccess, LogInFailure, EncodeString, EncodeSuccess, GetStatus, LogOut
+    LogIn, LogInSuccess, LogInFailure, EncodeString, EncodeSuccess, LogOut
 } from './../actions/auth.actions';
 
 
@@ -75,12 +75,4 @@ export class AuthEffects {
         ofType(AuthActionTypes.ENCODE_SUCCESS)
     );
 
-
-    @Effect({ dispatch: false })
-    GetStatus: Observable<any> = this.actions.pipe(
-        ofType(AuthActionTypes.GET_STATUS))
-        .map((action: GetStatus) => action)
-        .switchMap(payload => {
-            return this.authService.getStatus();
-        });
 }

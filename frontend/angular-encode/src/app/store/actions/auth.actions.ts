@@ -7,7 +7,6 @@ export enum AuthActionTypes {
   LOGIN_FAILURE = '[Auth] Login Failure',
   ENCODE_STRING = '[Auth] Encode',
   ENCODE_SUCCESS = '[Auth] Encode Success',
-  GET_STATUS = '[Auth] GetStatus',
   LOGOUT = '[Auth] LogOut'
 }
 
@@ -34,10 +33,6 @@ export class EncodeSuccess implements Action {
   readonly type = AuthActionTypes.ENCODE_SUCCESS;
   constructor(public payload: any) {}
 }
-export class GetStatus implements Action {
-  readonly type = AuthActionTypes.GET_STATUS;
-}
-
 export class LogOut implements Action {
   readonly type = AuthActionTypes.LOGOUT;
 }
@@ -49,5 +44,4 @@ export type All =
   | LogInFailure
   | EncodeString
   | EncodeSuccess
-  | GetStatus
   | LogOut
