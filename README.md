@@ -8,8 +8,12 @@ The project consists of 2 folders. In the first is the Node / Express API, in th
 - backend => npm install
 - frontend/angular-encode => npm install
 
+
 # Start project
 - backend => npm start
 - frontend/angular-encode  => ng serve
+
+# Validation 
+Validation with regex paterns on requested inputs(login/password, encde/alphabetic).
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -9,3 +9,12 @@
 
 ## Node
 10.15.2
+
+# Tests
+- Login API
+- Invalid inputs Login API
+- Encode APIShould success if input string exist
+- Encode Middleware API
+
+Run with npm test
+

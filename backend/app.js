@@ -48,6 +48,8 @@ app.get('/ping', (req, res, next)  => {
   });  
   
 app.post('/login', login)
-app.post('/encode', encode);
+app.post('/encode', middleware, encode);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+module.exports=app;
