@@ -24,7 +24,6 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
     this.getState.subscribe((state) => {
-      console.log(state);
       this.isAuthenticated = state.isAuthenticated;
       this.user = state.user;
       this.errorMessage = state.errorMessage;
