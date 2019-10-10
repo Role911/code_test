@@ -4,7 +4,7 @@
 
 ## URL	HTTP  Verb	Action
 - http://localhost:3000/login POST Log a user in
-- http://localhost:1337/encode POST Encode string
+- http://localhost:3000/encode POST Encode string
 
 
 ## Node
